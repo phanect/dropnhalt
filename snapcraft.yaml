@@ -1,0 +1,15 @@
+name: dropnhalt
+version: "0.0.1"
+summary: Synchronize Dropbox directory, then shutdown
+description: Synchronize Dropbox directory, then shutdown
+#confinement: strict
+
+apps:
+  dropnhalt:
+    command: dropnhalt
+
+parts:
+  dropnhalt:
+    plugin: copy
+    files:
+      dropnhalt: ./dropnhalt

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+
+sudo ls > /dev/null
+
+dropbox start
+
+while [[ $(dropbox status) != "Up to date" ]]; do
+  sudo echo $(dropbox status)
+  sleep 120
+done && sudo shutdown now
